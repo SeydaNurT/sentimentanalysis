@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>IMDB Sentiment Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎬 IMDB Movie Reviews Sentiment Analysis</h1>
+    <p>Write a movie review and the model will predict whether it is positive or negative.</p>
+
+    <form method="POST">
+        <textarea name="review" placeholder="Write your movie review here..." required></textarea>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h2>Conclusion:</h2>
+        <p>{{ prediction }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
